@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Video.js and VAST Example</title>
+
+    <link href="http://vjs.zencdn.net/4.7.1/video-js.css" rel="stylesheet">
+    <link href="src/css/videojs.ads.css" rel="stylesheet" type="text/css">
+    <link href="src/css/videojs.vast.css" rel="stylesheet" type="text/css">
+    <link href="src/css/main.css" rel="stylesheet" type="text/css">
+
+    <!--[if lt IE 9]>
+    <script src="src/js/es5.js"></script><![endif]-->
+    <script src="http://vjs.zencdn.net/4.7.1/video.js"></script>
+    <script src="src/js/videojs.ads.js"></script>
+
+    <script src="src/js/vast-client.js"></script>
+    <script src="src/js/videojs.vast.js"></script>
+    <script src="src/js/videojs-playlists.js"></script>
+
+</head>
+<body>
+
+<div class="example-video-container">
+    <p class="description">Vast on Pre Roll!</p>
+
+    <video id="player" class="video-js vjs-default-skin" controls data-setup="" width="640" height="264"></video>
+    <h1></h1>
+    <button type="button" data-action="prev" id="previous">Previous</button>
+    <button type="button" data-action="next" id="next">Next</button>
+</div>
+
+<script src="src/js/main.js"></script>
+
+</body>
+</html>

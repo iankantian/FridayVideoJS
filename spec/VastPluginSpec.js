@@ -165,7 +165,7 @@ describe('videojs.vast plugin', function() {
       });
 
       it("should end the ad", function() {
-        spyOn(player, "one");        
+        spyOn(player, "one");
         player.vast.preroll();
         expect(player.one).toHaveBeenCalledWith("ended", jasmine.any(Function));
       });

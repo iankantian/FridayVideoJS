@@ -1,0 +1,12 @@
+.description {
+    background-color: #eee;
+    border: 1px solid #777;
+    padding: 10px;
+    font-size: .8em;
+    line-height: 1.5em;
+    font-family: Verdana, sans-serif;
+}
+
+.example-video-container {
+    display: inline-block;
+}
