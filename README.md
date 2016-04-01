@@ -32,4 +32,11 @@ This plugin is technically an integration for video.js's [ads plugin](https://gi
 - skip: how long until the user can skip the ad. Defaults to 5, and a negative number will disable it.
 
 ### Credit
-The Vast plugin uses dailymotion's [vast client](https://github.com/dailymotion/vast-client-js) to read and parse the VAST files, and video.js's [ads plugin](https://github.com/videojs/videojs-contrib-ads) for switching from pre-roll to content.
+The Onion is not just a humor site, check out their github.  I'm using their Vast plugin which in tern uses dailymotion's  [vast client](https://github.com/dailymotion/vast-client-js) to read and parse the VAST files, and video.js's [ads plugin](https://github.com/videojs/videojs-contrib-ads) for switching from pre-roll to content.
+
+This demo also uses Antonio Laguna's [playlist](https://www.npmjs.com/package/videojs-playlist) videojs-playlists.js, however I removed the need for jquery dependence for my own reasons.
+
+### TODO
+make a client that can add to the video playlist from a grid of previews.
+allow audio ads to play
+make a companion player for the Vast client, as that is untreated at this time.
