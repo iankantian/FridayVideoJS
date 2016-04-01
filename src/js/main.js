@@ -43,7 +43,10 @@ var videos = [
     }
 ];
 
+/*Todo on hitting player.prev() during Vast Ad, the skip window doesn't go away every time! */
 player.muted(false);
+
+// .ads(); method is to allow the .vast() method access to the various events that you get access to.
 player.ads();
 player.vast({
     url: 'assets/ad/sample-vast.xml'

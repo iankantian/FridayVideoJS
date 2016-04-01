@@ -1406,10 +1406,17 @@
                                 value = variables[key];
                                 macro1 = "[" + key + "]";
                                 macro2 = "%%" + key + "%%";
-                                resolveURL = resolveURL.replace(macro1, value);
-                                resolveURL = resolveURL.replace(macro2, value);
+                                try{
+                                    resolveURL = resolveURL.replace(macro1, value);
+                                    resolveURL = resolveURL.replace(macro2, value);
+                                }
+                                catch( error ){
+                                    console.warn( 'resolveURL failed because', error  );
+                                }
                             }
-                            URLs.push(resolveURL);
+                            if(resolveURL){
+                                URLs.push(resolveURL);
+                            }
                         }
                         return URLs;
                     };
