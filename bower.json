@@ -1,28 +1,36 @@
 {
-  "name": "videojs-contrib-ads",
-  "version": "3.1.2",
-  "homepage": "https://github.com/videojs/videojs-contrib-ads",
+  "name": "videojs-vast-plugin",
+  "version": "0.2.1",
+  "homepage": "https://github.com/theonion/videojs-vast-plugin",
   "authors": [
-    "Brightcove"
+    "Shaker Islam <sislam@theonion.com>",
+    "Chris Sinchok <csinchok@theonion.com>",
+    "Sean Bloomfield <sbloomfield@theonion.com>",
+    "Andrew Kos <akos@theonion.com>",
+    "Vince Forgione <vforgione@theonion.com>"
   ],
-  "description": "A plugin that provides common functionality needed by video advertisement libraries working with video.js",
-  "main": "src/videojs.ads.js",
-  "moduleType": [
-    "globals"
-  ],
+  "description": "A VAST plugin for VideoJS",
+  "main": "videojs.vast.js",
   "keywords": [
     "videojs",
-    "html5",
     "video",
-    "ads",
-    "advertisements"
+    "vast",
+    "ads"
   ],
-  "license": "Apache-2.0",
+  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
-    "tests"
-  ]
+    "tests",
+    "spec",
+    "Gruntfile.js",
+    "lib"
+  ],
+  "dependencies": {
+    "videojs": "4.4.3",
+    "vast-client-js": "http://github.com/theonion/vast-client-js.git#a0529f00c96f5961c08ab0011df19fd124828e87",
+    "videojs-contrib-ads": "0.5.0"
+  }
 }
