@@ -1411,7 +1411,7 @@
                                     resolveURL = resolveURL.replace(macro2, value);
                                 }
                                 catch( error ){
-                                    console.warn( 'resolveURL failed because', error  );
+                                    console.warn( 'VASTUtil resolveURL failed because', error  );
                                 }
                             }
                             if(resolveURL){
