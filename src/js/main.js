@@ -4,6 +4,7 @@
 var player = videojs('player');
 var playerNext = document.getElementById( 'next' );
 var playerPrevious = document.getElementById( 'previous' );
+var playerPlay = document.getElementById( 'play' );
 
 
 // $('[data-action=prev]').on('click', function(e) {
@@ -13,6 +14,7 @@ var playerPrevious = document.getElementById( 'previous' );
 //     player.next();
 // });
 
+// This object is only used with the playlist, so, for now hardcode single video in index.html
 var videos = [
     {
         src : [
@@ -44,22 +46,34 @@ var videos = [
 ];
 
 /*Todo on hitting player.prev() during Vast Ad, the skip window doesn't go away every time! */
-player.muted(false);
+player.muted( false );
 
 // .ads(); method is to allow the .vast() method access to the various events that you get access to.
-player.ads();
-player.vast({
-    url: 'assets/ad/sample-vast.xml'
-});
+// player.ads();
+// commented out .vast to try a different plugin...
+// player.vast({
+//     url: 'assets/ad/sample-vast.xml'
+// });
 
-player.playList(videos, {
-    getVideoSource: function(vid, cb) {
-        cb(vid.src, vid.poster);
-    }
+// Remove the playlist funcitons for now...
+// player.playList(videos, {
+//     getVideoSource: function(vid, cb) {
+//         cb(vid.src, vid.poster);
+//     }
+// });
+//
+// playerNext.addEventListener('click', function(){
+//     player.next();
+//     // console.log( player.next() );
+// });
+// playerPrevious.addEventListener('click', function(){
+//     player.prev();
+//     // console.log( player.prev() );
+// });
+playerPlay.addEventListener('click', function(){
+    player.play();
+    // console.log( player.prev() );
 });
-
-playerNext.addEventListener('click', function(){ console.log( player.next() ); });
-playerPrevious.addEventListener('click', function(){ console.log( player.prev() ); });
 
 
 // // var testString = 'player';
